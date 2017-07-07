@@ -39,7 +39,7 @@ Function Get-AcunetixReport
 			{
 				# view the downloads property from the reports and get the PDF, not the HTML
 				$pdf = $report.download | where {$_ -like "*.pdf"}
-				#need to extract Majcom from report.source.description (e.g. https://1.1.1.1;<MAJCOM>)
+				#need to extract Majcom from report.source.description (e.g. https://1.1.1.1)
 				$Majcom = $report.source.description.split(";")[1]
 				# split the target on the colon, left side is IP, right side is port
 				$ip = $target.split(":")[0]
