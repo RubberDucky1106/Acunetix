@@ -28,7 +28,7 @@ Function Get-AcunetixReport
 	foreach ($target in $targets)
 	{
 		$count++
-        Write-Progress -Activity 'Gathering Reports' -Status "Processing $($count) of $($targets.count) targets" -PercentComplete (($count/$targets.count) * 100)
+        	Write-Progress -Activity 'Gathering Reports' -Status "Processing $($count) of $($targets.count) targets" -PercentComplete (($count/$targets.count) * 100)
 		#iterate through the list of reports, comparing each target to each report
 		foreach ($report in $($reports.reports))
 		{
