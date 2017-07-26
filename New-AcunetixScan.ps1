@@ -66,7 +66,7 @@ Function New-AcunetixScan
 	foreach ($target in $($targets.targets.target_id))
 	{	
 		$count++
-        Write-Progress -Activity 'Scheduling Scans' -Status "Processing $($count) of $($targets.targets.target_id.count) scans" -PercentComplete (($count/$($targets.targets.target_id.count)) * 100)
+        	Write-Progress -Activity 'Scheduling Scans' -Status "Processing $($count) of $($targets.targets.target_id.count) scans" -PercentComplete (($count/$($targets.targets.target_id.count)) * 100)
 		#	Acunetix has a max of 100 scans concurrent
 
 		$hash = [ordered]@{
